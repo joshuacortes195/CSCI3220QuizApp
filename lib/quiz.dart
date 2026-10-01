@@ -64,8 +64,8 @@ void restartQuiz() {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color.fromARGB(255, 78,  13, 151),
-              Color.fromARGB(255, 107,  15, 168),
+              Color.fromARGB(255, 74, 74, 74),
+              Color.fromARGB(255, 181, 180, 181),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight
