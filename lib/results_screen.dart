@@ -59,11 +59,14 @@ class ResultsScreen extends StatelessWidget {
             ),
             TextButton(
               onPressed: onRestart,
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.black,
+              ),
               child: Text('Restart Quiz!'),
             )
           ], 
         ),
       ),
-    ); 
+    );
   }
 }
