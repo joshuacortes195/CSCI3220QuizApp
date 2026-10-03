@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/answer_button.dart';
 import 'package:quiz_app/data/questions.dart';
+import 'package:quiz_app/quiz_progress_bar.dart';
 
 // One question at a time
 class QuestionsScreen extends StatefulWidget {
@@ -44,7 +45,13 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
       width: double.infinity,
       child: Container(
         margin: const EdgeInsets.all(40),
+        // outer column keeps the progress bar at the bottom
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // question and answers fill the rest of the screen
+            Expanded(
+              child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -67,6 +74,14 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                },
               );
             })
+          ],
+              ),
+            ),
+            // shows how far along the quiz we are
+            QuizProgressBar(
+              currentQuestion: currentQuestionIndex + 1,
+              totalQuestions: questions.length,
+            ),
           ],
         )
       ),
