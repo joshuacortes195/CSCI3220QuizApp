@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// Josh 
+// Josh & Juan
 // progress bar that sits at the bottom of the quiz
 class QuizProgressBar extends StatelessWidget {
   const QuizProgressBar({
